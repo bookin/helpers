@@ -2,10 +2,22 @@
 namespace bookin\helpers\yii2;
 
 use yii\helpers\ArrayHelper;
-use \Yii;
+use Yii;
 
 /**
  * Class Extensions
+ *
+ * add to config file:
+ * <code>
+ * 'extensions'=>Extensions::add([
+ *      'phpoffice/phpword'=>[
+ *          'name'=>'phpoffice/phpword',
+ *          'alias'=>
+ *              '&#64;phpoffice/phpword'=>'&#64;extensions/phpoffice/phpword',
+ *          ]
+ *      ];
+ * ]);
+ * </code>
  */
 class Extensions{
 
