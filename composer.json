@@ -6,5 +6,9 @@
             "email": "i.anton.mikhailov@gmail.com"
         }
     ],
-    "require": {}
+    "type": "yii2-extension",
+    "require": {
+        "php": ">=5.4.0",
+        "yiisoft/yii2": "*"
+    }
 }
