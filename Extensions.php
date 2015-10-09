@@ -16,7 +16,7 @@ use Yii;
  *              '&#64;phpoffice/phpword'=>'&#64;extensions/phpoffice/phpword',
  *          ]
  *      ];
- * ]);
+ * ], dirname(__DIR__).'/extensions', dirname(__DIR__).'/vendor/yiisoft/extensions.php');
  * </code>
  */
 class Extensions{
@@ -36,11 +36,12 @@ class Extensions{
      * @return array
      */
     public static function add($extensions=[], $extensionsDir=null, $vendorExtension=null){
+        $dr = DIRECTORY_SEPARATOR;
         if(empty($extensionsDir))
-            $extensionsDir =  dirname(__DIR__). DIRECTORY_SEPARATOR . 'extensions';
+            $extensionsDir =  dirname(__DIR__). "{$dr}..{$dr}..{$dr}extensions";
 
         if(empty($vendorExtension))
-            $vendorExtension = dirname(__DIR__). "/vendor/yiisoft/extensions.php";
+            $vendorExtension = dirname(__DIR__). "{$dr}..{$dr}yiisoft{$dr}extensions.php";
 
         $vendorExtension = require_once $vendorExtension;
 
