@@ -6,7 +6,7 @@
  * Time: 16:56
  */
 
-namespace bookin\helpers\yii2;
+namespace bookin\yii2\helpers;
 
 
 use yii\db\ActiveQueryInterface;

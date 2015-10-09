@@ -1,5 +1,5 @@
 <?php
-namespace bookin\helpers\yii2;
+namespace bookin\yii2\helpers;
 
 use yii\helpers\ArrayHelper;
 use Yii;
